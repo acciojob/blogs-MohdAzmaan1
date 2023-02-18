@@ -23,8 +23,7 @@ public class BlogController {
         try{
             blogService.createAndReturnBlog(userId,title,content);
         }
-        catch (Exception e){
-
+        catch (Exception ignored){
         }
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
