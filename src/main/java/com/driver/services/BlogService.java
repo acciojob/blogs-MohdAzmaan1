@@ -19,11 +19,11 @@ public class BlogService {
     BlogRepository blogRepository1;
 
     @Autowired
-    UserRepository userRepository;
+    UserRepository userRepository1;
 
     public Blog createAndReturnBlog(Integer userId, String title, String content) {
         //create a blog at the current time
-        User user = userRepository.findById(userId).get();
+        User user = userRepository1.findById(userId).get();
         Blog blog = new Blog();
         blog.setPubDate(new Date());
         blog.setTitle(title);
@@ -31,7 +31,7 @@ public class BlogService {
         blog.setUser(user);
 
         //user.getBlogList().add(blog);
-        userRepository.save(user);
+        userRepository1.save(user);
         return blog;
     }
 
