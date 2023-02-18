@@ -17,7 +17,7 @@ public class Blog {
     private String title;
     private String content;
 
-    @CreationTimestamp
+    //@CreationTimestamp
     private Date pubDate;
 
     public Blog(String title, String content, User user) {

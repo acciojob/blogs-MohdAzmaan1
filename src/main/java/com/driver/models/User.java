@@ -1,6 +1,7 @@
 package com.driver.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,6 +21,7 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
 
     public User() {
     }
@@ -65,7 +67,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    List<Blog> blogList;
+    List<Blog> blogList = new ArrayList<>();
 
     public List<Blog> getBlogList() {
         return blogList;
