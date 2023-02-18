@@ -18,7 +18,7 @@ public class Blog {
     private String content;
 
     @CreationTimestamp
-    Date pubDate;
+    private Date pubDate;
 
     public Blog(String title, String content, User user) {
         this.title = title;
