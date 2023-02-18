@@ -65,7 +65,6 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JoinColumn
     List<Blog> blogList;
 
     public List<Blog> getBlogList() {
