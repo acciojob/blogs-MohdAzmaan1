@@ -12,6 +12,7 @@ public class ImageService {
 
     @Autowired
     BlogRepository blogRepository2;
+
     @Autowired
     ImageRepository imageRepository2;
 
@@ -45,9 +46,9 @@ public class ImageService {
         int imageLength = Integer.parseInt(imageArray[0]);
         int imageBreadth = Integer.parseInt(imageArray[1]);
 
-        return no_Images(screenLength,screenBreadth,imageLength,imageBreadth);
+        return noOfImages(screenLength,screenBreadth,imageLength,imageBreadth);
     }
-    private int no_Images(int screenLength, int screenBreadth, int imageLength, int imageBreadth) {
+    private int noOfImages(int screenLength, int screenBreadth, int imageLength, int imageBreadth) {
         int lenC = screenLength/imageLength;
         int lenB = screenBreadth/imageBreadth;
         return lenC*lenB;

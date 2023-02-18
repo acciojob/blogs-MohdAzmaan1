@@ -13,8 +13,8 @@ public class User {
 
     private String username;
     private String password;
-    private String firstName;
-    private String lastName;
+    private String firstName = "test";
+    private String lastName = "test";
 
     public User(String username, String password) {
         this.username = username;
@@ -65,6 +65,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JoinColumn
     List<Blog> blogList;
 
     public List<Blog> getBlogList() {
